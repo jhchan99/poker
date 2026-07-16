@@ -1,4 +1,6 @@
+class_name Card
 extends Node2D
+
 
 var card_being_dragged
 var screen_size

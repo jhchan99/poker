@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://4noxpnq7ymii"]
+
+[ext_resource type="Texture2D" uid="uid://bce1cvd57gnje" path="res://assets/characters/dealer/hands.png" id="1_broi7"]
+
+[node name="Dealer" type="Node2D" unique_id=1002253595]
+
+[node name="DealerImage" type="Sprite2D" parent="." unique_id=1382784291]
+scale = Vector2(0.6, 0.59814817)
+texture = ExtResource("1_broi7")
+centered = false
+flip_v = true

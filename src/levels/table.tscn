@@ -5,4 +5,6 @@
 [node name="Board01" type="Node2D" unique_id=2098184971]
 
 [node name="BoardImage" type="Sprite2D" parent="." unique_id=1855847302]
+scale = Vector2(1.8538681, 1.4918699)
 texture = ExtResource("1_ihfl0")
+centered = false

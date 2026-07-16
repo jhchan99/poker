@@ -24,6 +24,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="CenterContainer" type="Container" parent="HudLayer/HudRoot" unique_id=1569965709]
 layout_mode = 0
@@ -37,6 +38,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="DebugLayer" type="CanvasLayer" parent="." unique_id=1011061106]
 
@@ -45,3 +47,10 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="DebugTextOverlay" type="Control" parent="DebugLayer/DebugRoot" unique_id=1584545985]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_behavior_recursive = 1
