@@ -24,11 +24,15 @@ window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-neovim/plugin.cfg")
+
 [layer_names]
 
-2d_render/layer_1="Table"
-2d_render/layer_2="Dealer"
-2d_render/layer_3="Card"
+2d_render/layer_1="World"
+2d_render/layer_2="Player"
+2d_render/layer_3="Effect"
 2d_physics/layer_1="Table"
 2d_physics/layer_2="Dealer"
 2d_physics/layer_3="Card"

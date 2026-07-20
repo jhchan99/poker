@@ -5,8 +5,9 @@ const CARD 		: String = "uid://dfuc6u71k3f06"
 const TABLE		: String = "uid://bhnc738v0qa8l"
 
 var card : Card = null
-
 var _current_table : Node2D = null
+var deck: Deck
+var cards: Array[Card] = []
 
 # Game world root nodes
 @onready var level_root 	: Node2D = $World/LevelRoot
@@ -22,9 +23,8 @@ var _current_table : Node2D = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_init_table()
-	_init_card()
-
-
+	_init_cards()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -39,13 +39,16 @@ func _init_table() -> void:
 	level_root.add_child(_current_table)
 	return
 
-# instantiates the deck and adds it to the entity layer
-func _init_card() -> void:
+# instantiates the card and adds it to the entity layer
+func _init_cards() -> void:
 	var card_scene : PackedScene = load(CARD) as PackedScene
 	if card_scene == null:
 		push_error("Failed to load card scene" + CARD)
 		return
-	card = card_scene.instantiate() as Card
-	entity_root.add_child(card)
-	card.position = get_viewport().get_visible_rect().size / 2
+	
+	deck = Deck.new()
+	cards = deck.build_deck(card_scene, entity_root)
+
+	for i in cards.size():
+		cards[i].position = (get_viewport().get_visible_rect().size / 2) + Vector2(i,i)	
 	return
